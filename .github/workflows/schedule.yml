@@ -1,0 +1,26 @@
+# This is a basic workflow that is scheduled
+
+name: Scheduled workflow
+
+on:
+  schedule:
+    - cron: "0 0 * * *" #runs at 00:00 UTC everyday
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content to github runner.
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8 #install the python needed
+      - name: execute py script # run the hello_world.py
+        env:
+          EMAIL_SECRET: ${{ secrets.EMAIL_SECRET }}
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+          EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
+        run: |
+          python3 mailbot.py
