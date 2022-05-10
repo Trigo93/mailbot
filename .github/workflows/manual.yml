@@ -1,6 +1,6 @@
 # This is a basic workflow that is triggered manually
 
-name: Scheduled workflow
+name: Manual workflow
 
 on: [workflow_dispatch]
 jobs:
