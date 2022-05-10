@@ -3,14 +3,15 @@ import smtplib
 from email.message import EmailMessage
 
 # Variables containing your email address and password
-EMAIL_ADDRESS = os.environ['EMAIL']
+EMAIL_SENDER = os.environ['EMAIL_SENDER']
+EMAIL_RECEIVER = os.environ['EMAIL_RECEIVER']
 EMAIL_PASSWORD = os.environ['EMAIL_SECRET']
 
 # Create an instance of the EmailMessage class
 msg = EmailMessage()# Define the 'Subject' of the email
 msg['Subject'] = 'Coucou Moumine'# Define 'From' (your email address)
-msg['From'] = EMAIL_ADDRESS# Define 'To' (to whom is it addressed)
-msg['To'] = "lauriane.houdebine@hotmail.fr"# The email content (your message)
+msg['From'] = EMAIL_SENDER # Define 'To' (to whom is it addressed)
+msg['To'] = EMAIL_RECEIVER # The email content (your message)
 msg.set_content('Test des boubins!')
 
 with open('./photo.jpeg', 'rb') as attach:
