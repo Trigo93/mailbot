@@ -25,4 +25,4 @@ def process(attachment, subject, content):
         smtp.send_message(msg)
 
 if __name__ == "__main__":
-	process('/home/trigo/Documents/photo.jpeg', "Coucou", "Test")
+	process('photo.jpeg', "Coucou", "Test")
