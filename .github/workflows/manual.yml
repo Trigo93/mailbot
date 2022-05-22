@@ -19,5 +19,6 @@ jobs:
           EMAIL_SECRET: ${{ secrets.EMAIL_SECRET }}
           EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
           EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
+          DROPBOX_SECRET: ${{ secrets.DROPBOX_SECRET }}
         run: |
-          python3 mailbot.py
+          python3 dropbox_helper.py
