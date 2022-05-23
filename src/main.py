@@ -1,12 +1,16 @@
 import os
 import gdrive_helper as gd
 import pdf_helper as pdf
-import mailbot as mail
+import mail_helper as mail
 
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
+# Secret environment variables
 DRIVE_FILE_ID = os.environ['DRIVE_FILE_ID']
+EMAIL_SENDER = os.environ['EMAIL_SENDER']
+EMAIL_RECEIVER = os.environ['EMAIL_RECEIVER']
+EMAIL_PASSWORD = os.environ['EMAIL_SECRET']
 
 # Download template from google drive
 gd.download_file_from_google_drive(DRIVE_FILE_ID, "template.pdf")
