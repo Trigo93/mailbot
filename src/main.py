@@ -43,3 +43,5 @@ content = \
     "Nous avons bien reçu votre virement. Vous trouverez donc en pièce jointe la quittance pour votre paiement.\n\n" \
     "Bien cordialement,\n" \
     "Lauriane Houdebine"
+
+mail.process(fname, subject, content)
