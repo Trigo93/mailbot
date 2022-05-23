@@ -49,4 +49,4 @@ content = \
     "Lauriane Houdebine"
 
 # Send email
-mail.process(sender, receiver, fname, subject, content)
+mail.process(EMAIL_SENDER, EMAIL_RECEIVER, fname, subject, content, EMAIL_PASSWORD)
