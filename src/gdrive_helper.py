@@ -33,5 +33,5 @@ def save_response_content(response, destination):
                 f.write(chunk)
 
 if __name__ == "__main__":
-    destination = './'
+    destination = './template.pdf'
     download_file_from_google_drive(DRIVE_FILE_ID, destination)
