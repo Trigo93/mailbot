@@ -1,3 +1,4 @@
+import os
 import pathlib
 import dropbox
 from dropbox.exceptions import AuthError
