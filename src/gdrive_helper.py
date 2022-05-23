@@ -1,8 +1,6 @@
 import os
 import requests
 
-DRIVE_FILE_ID = os.environ['DRIVE_FILE_ID']
-
 def download_file_from_google_drive(id, destination):
     URL = "https://docs.google.com/uc?export=download"
 
@@ -33,5 +31,6 @@ def save_response_content(response, destination):
                 f.write(chunk)
 
 if __name__ == "__main__":
+    DRIVE_FILE_ID = os.environ['DRIVE_FILE_ID']
     destination = './template.pdf'
     download_file_from_google_drive(DRIVE_FILE_ID, destination)
