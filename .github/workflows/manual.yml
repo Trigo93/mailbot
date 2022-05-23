@@ -14,8 +14,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8 #install the python needed
-#      - name: Install dependencies
-#        run: python -m pip install --upgrade pip <package>
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip requests
       - name: execute py script # run the hello_world.py
         env:
           EMAIL_SECRET: ${{ secrets.EMAIL_SECRET }}
