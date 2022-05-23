@@ -1,5 +1,5 @@
 import os
-import google_drive_helper as gd
+import gdrive_helper as gd
 import pdf_writer as pw
 import mailbot as mail
 
