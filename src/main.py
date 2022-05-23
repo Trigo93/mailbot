@@ -1,6 +1,6 @@
 import os
 import gdrive_helper as gd
-import pdf_writer as pw
+import pdf_helper as pdf
 import mailbot as mail
 
 from datetime import date
@@ -28,7 +28,7 @@ replacements = {
 print("Replacing startDate and endDate in template with", d1, "and", d2)
 
 # Process pdf
-writer = pw.process("template.pdf", replacements)
+writer = pdf.process("template.pdf", replacements)
 
 # Create a new pdf file with changes
 fname = "quittance_" + first_day.strftime("%m_%Y") + ".pdf"
@@ -44,4 +44,5 @@ content = \
     "Bien cordialement,\n" \
     "Lauriane Houdebine"
 
-mail.process(fname, subject, content)
+# Send email
+mail.process(sender, receiver, fname, subject, content)
