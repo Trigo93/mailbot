@@ -1,5 +1,3 @@
-import os
-import argparse
 from PyPDF2 import PdfFileReader, PdfFileWriter
 from PyPDF2.generic import DecodedStreamObject, EncodedStreamObject, NameObject
 
@@ -15,7 +13,6 @@ def replace_text(content, replacements = dict()):
         result += replaced_line + "\n"
 
     return result
-
 
 def process_data(object, replacements):
     data = object.getData()
@@ -53,8 +50,8 @@ def process(file, replacements):
 
 
 if __name__ == "__main__":
-    from datetime import date
-    from dateutil.relativedelta import relativedelta
+    import os
+    import argparse
 
     ap = argparse.ArgumentParser()
     ap.add_argument("-i", "--input", required=True, help="path to PDF document")
@@ -63,22 +60,13 @@ if __name__ == "__main__":
     file = args["input"]
     filename_base = file.replace(os.path.splitext(file)[1], "")
 
-    # Get first month day
-    first_day = date.today().replace(day=1)
-    d1 = first_day.strftime("%d/%m/%Y")
-
-    # Get last month day
-    next_month = first_day + relativedelta(months=1)
-    d2 = (next_month - relativedelta(days=1)).strftime("%d/%m/%Y")
-
      # String to replace in PDF template
     replacements = {
-        'startDate': d1,
-        'endDate': d2,
+        'old_val': new_val,
         }
 
     writer = process(file, replacements)
 
     # Create a new pdf file with changes
-    with open(filename_base + "_" + first_day.strftime("%m_%Y") + ".pdf", 'wb') as out_file:
+    with open(filename_base + "_result" + ".pdf", 'wb') as out_file:
         writer.write(out_file)
