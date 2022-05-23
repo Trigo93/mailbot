@@ -23,4 +23,4 @@ jobs:
           EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
           DROPBOX_SECRET: ${{ secrets.DROPBOX_SECRET }}
         run: |
-          python3 dropbox_helper.py
+          python3 src/dropbox_helper.py
