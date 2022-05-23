@@ -14,13 +14,13 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8 #install the python needed
-      - name: Install dependencies
-        run: python -m pip install --upgrade pip dropbox
+#      - name: Install dependencies
+#        run: python -m pip install --upgrade pip <package>
       - name: execute py script # run the hello_world.py
         env:
           EMAIL_SECRET: ${{ secrets.EMAIL_SECRET }}
           EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
           EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
-          DROPBOX_SECRET: ${{ secrets.DROPBOX_SECRET }}
+          DRIVE_FILE_ID: ${{ secrets.DRIVE_FILE_ID }}
         run: |
-          python3 src/dropbox_helper.py
+          python3 src/gdrive_helper.py
