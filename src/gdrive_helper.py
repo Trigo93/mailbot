@@ -1,4 +1,3 @@
-import os
 import requests
 
 def download_file_from_google_drive(id, destination):
@@ -31,6 +30,8 @@ def save_response_content(response, destination):
                 f.write(chunk)
 
 if __name__ == "__main__":
+    import os
+
     DRIVE_FILE_ID = os.environ['DRIVE_FILE_ID']
     destination = './template.pdf'
     download_file_from_google_drive(DRIVE_FILE_ID, destination)
