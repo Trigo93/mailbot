@@ -4,7 +4,7 @@ name: Scheduled workflow
 
 on:
   schedule:
-    - cron: "0 0 3 * *"
+    - cron: "0 0 1 * *"
 
 jobs:
   build:
