@@ -17,11 +17,11 @@ gd.download_file_from_google_drive(DRIVE_FILE_ID, "template.pdf")
 
 # Get first month day
 first_day = date.today().replace(day=1)
-d1 = first_day.strftime("%d/%m/%Y")
+d1 = first_day.strftime("%d-%m-%Y")
 
 # Get last month day
 next_month = first_day + relativedelta(months=1)
-d2 = (next_month - relativedelta(days=1)).strftime("%d/%m/%Y")
+d2 = (next_month - relativedelta(days=1)).strftime("%d-%m-%Y")
 
 # String to replace in PDF template
 replacements = {
