@@ -8,7 +8,7 @@ from datetime import date
 from dateutil.relativedelta import relativedelta
 
 # Secret environment variables
-DRIVE_FILE_ID = os.environ['DRIVE_FILE_ID']
+DRIVE_FILE_IDS = [os.environ['SIGNATURE1'], os.environ['SIGNATURE2']]
 EMAIL_SENDER = os.environ['EMAIL_SENDER']
 EMAIL_RECEIVER = os.environ['EMAIL_RECEIVER']
 EMAIL_PASSWORD = os.environ['EMAIL_SECRET']
