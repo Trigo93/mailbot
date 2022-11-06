@@ -8,10 +8,10 @@ from datetime import date
 from dateutil.relativedelta import relativedelta
 
 # Secret environment variables
-DRIVE_FILE_IDS = ["1yn32ztzSuuYFG56Hm7R5Ak7TZjqYrqUq", "1vzoEtv0IuFz3uBRwyECJr9ppz4GhAnSz"]
-EMAIL_SENDER = "t.mallet93@gmail.com"
-EMAIL_RECEIVER = "lauriane.houdebine@hotmail.fr"
-EMAIL_PASSWORD = "vgklnqfntpdqacsi"
+DRIVE_FILE_ID = os.environ['DRIVE_FILE_ID']
+EMAIL_SENDER = os.environ['EMAIL_SENDER']
+EMAIL_RECEIVER = os.environ['EMAIL_RECEIVER']
+EMAIL_PASSWORD = os.environ['EMAIL_SECRET']
 
 ap = argparse.ArgumentParser()
 ap.add_argument('-n','--names', nargs='+', help='noms des locataires', required=True)
