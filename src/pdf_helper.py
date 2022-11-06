@@ -111,7 +111,7 @@ def create(fname, data):
     p.cell(0, 3, "En cas de congé précédemment donné, cette quittance ou ce reçu représenterait l'indemnité d'occupation", ln=1, align="C")
     p.cell(0, 3, "et ne saurait être considéré comme un titre d'occupation. Sous réserve d'encaissement.", ln=1, align="C")
 
-    p.output(fname, 'F')
+    p.output(fname, 'D')
 
 if __name__ == "__main__":
     import os
