@@ -51,4 +51,4 @@ content = \
     "Lauriane Houdebine"
 
 # Send email
-mail.process(EMAIL_SENDER, EMAIL_RECEIVER, "src/"+fname, subject, content, EMAIL_PASSWORD)
+mail.process(EMAIL_SENDER, EMAIL_RECEIVER, fname, subject, content, EMAIL_PASSWORD)
