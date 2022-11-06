@@ -2,7 +2,7 @@ import os
 import argparse
 import gdrive_helper as gd
 import pdf_helper as pdf
-import mailbot as mail
+import mail_helper as mail
 
 from datetime import date
 from dateutil.relativedelta import relativedelta
