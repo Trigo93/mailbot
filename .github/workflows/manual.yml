@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: 3.8 #install the python needed
       - name: Install dependencies
-        run: pip3 install requests pypdf pypdf2==1.26.0 python-dateutil
+        run: pip3 install requests fpdf pypdf2==1.26.0 python-dateutil
       - name: execute py script # run the hello_world.py
         env:
           EMAIL_SECRET: ${{ secrets.EMAIL_SECRET }}
