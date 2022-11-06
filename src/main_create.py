@@ -1,6 +1,6 @@
 import os
 import argparse
-import google_drive_helper as gd
+import gdrive_helper as gd
 import pdf_writer as pdf
 import mailbot as mail
 
