@@ -1,3 +1,4 @@
+# Uodate an existing template got from google drive
 import os
 import gdrive_helper as gd
 import pdf_helper as pdf
@@ -27,8 +28,6 @@ d2 = (next_month - relativedelta(days=1)).strftime("%d-%m-%Y")
 replacements = {
     'startDate': d1,
     'endDate': d2,
-    'M. PASQUET Romain': 'Mme LENGAGNE Agnès',
-    'M. ISABELLE Simon': 'M. MALVEZIN Sylvain'
     }
 
 print("Replacing startDate and endDate in template with", d1, "and", d2)
@@ -44,7 +43,7 @@ with open(fname, 'wb') as out_file:
 # Send email
 subject = "Quittance " + first_day.strftime("%m/%Y")
 content = \
-    "Bonjour Agnès et Sylvain,\n" \
+    "Bonjour Romain et Simon,\n" \
     "Nous espérons que tout se passe bien pour vous à Vitry.\n" \
     "Nous avons bien reçu votre virement. Vous trouverez donc en pièce jointe la quittance pour votre paiement.\n\n" \
     "Bien cordialement,\n" \
